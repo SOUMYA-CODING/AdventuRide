@@ -28,7 +28,7 @@ class LocationModel {
   });
 }
 
-List<LocationModel> dymmyLocationsData = [
+List<LocationModel> dummyLocationsData = [
   LocationModel(
     id: 1,
     placeName: "Borobudur Temple",

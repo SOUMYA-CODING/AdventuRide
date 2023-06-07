@@ -2,6 +2,7 @@ import 'package:fluentui_icons/fluentui_icons.dart';
 import 'package:flutter/material.dart';
 import 'package:frontend/core/colors.dart';
 import 'package:frontend/model/location_model.dart';
+import 'package:frontend/screens/common/cities_details.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class CitiesBigCard extends StatelessWidget {
@@ -13,9 +14,9 @@ class CitiesBigCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListView.builder(
       scrollDirection: Axis.horizontal,
-      itemCount: dymmyLocationsData.length,
+      itemCount: dummyLocationsData.length,
       itemBuilder: (context, index) {
-        LocationModel locationModel = dymmyLocationsData[index];
+        LocationModel locationModel = dummyLocationsData[index];
         return Container(
           width: 300,
           margin: const EdgeInsets.only(right: 20),
@@ -83,7 +84,14 @@ class CitiesBigCard extends StatelessWidget {
                     Align(
                       alignment: Alignment.centerRight,
                       child: InkWell(
-                        onTap: () {},
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => const CitiesDetails(),
+                            ),
+                          );
+                        },
                         child: Container(
                           height: 60,
                           width: 100,

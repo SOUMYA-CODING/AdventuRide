@@ -68,7 +68,7 @@ class _DashboardTabState extends State<DashboardTab> {
           ),
           bottomNavigationBarItem(
             const Icon(
-              FluentSystemIcons.ic_fluent_bookmark_regular,
+              FluentSystemIcons.ic_fluent_person_regular,
             ),
             "Profile",
           ),

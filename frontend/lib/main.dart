@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:frontend/core/colors.dart';
+import 'package:frontend/screens/authentication/login.dart';
+import 'package:frontend/screens/authentication/otp.dart';
+import 'package:frontend/screens/authentication/password_reset.dart';
+import 'package:frontend/screens/authentication/registration.dart';
 import 'package:frontend/screens/dashboard/dashboard_tab.dart';
 import 'package:frontend/screens/start/onboarding.dart';
 
@@ -14,26 +18,58 @@ void main() {
   runApp(
     const MaterialApp(
       debugShowCheckedModeBanner: false,
-      initialRoute: RoutePath.dashboardTab,
+      initialRoute: RoutePath.onboardingScreenRoute,
       onGenerateRoute: Router.generateRoute,
     ),
   );
 }
 
 class RoutePath {
+  // Start
   static const onboardingScreenRoute = "/onboarding_screen";
-  static const dashboardTab = "/dashboard_tab";
+
+  // Authentication
+  static const loginScreenRoute = '/login_screen';
+  static const registrationScreenRoute = '/registration_screen';
+  static const passwordResetScreenRoute = '/password_reset_screen';
+  static const otpScreenRoute = '/otp_screen';
+
+  // Dashboard
+  static const dashboardTabScreenRoute = "/dashboard_tab_screen";
 }
 
 class Router {
   static Route<dynamic> generateRoute(RouteSettings settings) {
     switch (settings.name) {
+      // Start
       case RoutePath.onboardingScreenRoute:
         return MaterialPageRoute(
           builder: (_) => const OnboardingScreen(),
         );
 
-      case RoutePath.dashboardTab:
+      // Authentication
+      case RoutePath.loginScreenRoute:
+        return MaterialPageRoute(
+          builder: (_) => const LoginScreen(),
+        );
+
+      case RoutePath.registrationScreenRoute:
+        return MaterialPageRoute(
+          builder: (_) => const RegistrationScreen(),
+        );
+
+      case RoutePath.passwordResetScreenRoute:
+        return MaterialPageRoute(
+          builder: (_) => const PasswordResetScreen(),
+        );
+
+      case RoutePath.otpScreenRoute:
+        return MaterialPageRoute(
+          builder: (_) => const OtpScreen(),
+        );
+
+      // Dashboard
+      case RoutePath.dashboardTabScreenRoute:
         return MaterialPageRoute(
           builder: (_) => const DashboardTab(),
         );
