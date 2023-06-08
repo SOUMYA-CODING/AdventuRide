@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:frontend/core/colors.dart';
 import 'package:frontend/widgets/cities/cities_big_card.dart';
-import 'package:frontend/widgets/countries/countries_big_card.dart';
 import 'package:frontend/widgets/destinations/destination_big_card.dart';
+import 'package:frontend/widgets/states/states_big_card.dart';
 
 class HomeTabSection extends StatelessWidget {
   const HomeTabSection({
@@ -37,10 +37,10 @@ class HomeTabSection extends StatelessWidget {
                   controller: _tabController,
                   tabs: const [
                     Tab(
-                      text: "Cities",
+                      text: "States",
                     ),
                     Tab(
-                      text: "Countries",
+                      text: "Cities",
                     ),
                     Tab(
                       text: "Destinations",
@@ -57,8 +57,8 @@ class HomeTabSection extends StatelessWidget {
                   child: TabBarView(
                     controller: _tabController,
                     children: const [
+                      StatesBigCard(),
                       CitiesBigCard(),
-                      CountriesBigCard(),
                       DestinationBigCard(),
                     ],
                   ),

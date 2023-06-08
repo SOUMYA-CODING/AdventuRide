@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:frontend/core/colors.dart';
+import 'package:frontend/screens/authentication/account_setup.dart';
 import 'package:frontend/screens/authentication/login.dart';
 import 'package:frontend/screens/authentication/otp.dart';
 import 'package:frontend/screens/authentication/password_reset.dart';
 import 'package:frontend/screens/authentication/registration.dart';
+import 'package:frontend/screens/authentication/registration_complete.dart';
 import 'package:frontend/screens/dashboard/dashboard_tab.dart';
 import 'package:frontend/screens/start/onboarding.dart';
 
@@ -33,6 +35,8 @@ class RoutePath {
   static const registrationScreenRoute = '/registration_screen';
   static const passwordResetScreenRoute = '/password_reset_screen';
   static const otpScreenRoute = '/otp_screen';
+  static const accountSetupRoute = '/account_setup_screen';
+  static const registrationCompleteRoute = 'registration_complete_screen';
 
   // Dashboard
   static const dashboardTabScreenRoute = "/dashboard_tab_screen";
@@ -66,6 +70,16 @@ class Router {
       case RoutePath.otpScreenRoute:
         return MaterialPageRoute(
           builder: (_) => const OtpScreen(),
+        );
+
+      case RoutePath.accountSetupRoute:
+        return MaterialPageRoute(
+          builder: (_) => const AccountSetupScreen(),
+        );
+
+      case RoutePath.registrationCompleteRoute:
+        return MaterialPageRoute(
+          builder: (_) => const RegistrationCompleteScreen(),
         );
 
       // Dashboard

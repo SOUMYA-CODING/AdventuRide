@@ -2,11 +2,11 @@ import 'package:fluentui_icons/fluentui_icons.dart';
 import 'package:flutter/material.dart';
 import 'package:frontend/core/colors.dart';
 import 'package:frontend/model/location_model.dart';
-import 'package:frontend/screens/common/countries_details.dart';
+import 'package:frontend/screens/common/states_details.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class CountriesBigCard extends StatelessWidget {
-  const CountriesBigCard({
+class StatesBigCard extends StatelessWidget {
+  const StatesBigCard({
     super.key,
   });
 

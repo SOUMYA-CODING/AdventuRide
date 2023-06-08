@@ -1,6 +1,7 @@
 import 'package:fluentui_icons/fluentui_icons.dart';
 import 'package:flutter/material.dart';
 import 'package:frontend/core/colors.dart';
+import 'package:frontend/main.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class RegistrationScreen extends StatefulWidget {
@@ -14,6 +15,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       body: SafeArea(
         child: Stack(
           children: [
@@ -195,7 +197,11 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                         ),
                         elevation: MaterialStateProperty.all(0),
                       ),
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.of(context).pushNamed(
+                          RoutePath.otpScreenRoute,
+                        );
+                      },
                       child: Text(
                         "Register",
                         style: GoogleFonts.poppins(

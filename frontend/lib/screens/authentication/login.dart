@@ -15,6 +15,7 @@ class _LoginScreenState extends State<LoginScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       body: SafeArea(
         child: Stack(
           children: [
@@ -148,7 +149,11 @@ class _LoginScreenState extends State<LoginScreen> {
                         ),
                         elevation: MaterialStateProperty.all(0),
                       ),
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.of(context).pushNamed(
+                          RoutePath.dashboardTabScreenRoute,
+                        );
+                      },
                       child: Text(
                         "Login",
                         style: GoogleFonts.poppins(
@@ -188,7 +193,7 @@ class _LoginScreenState extends State<LoginScreen> {
                         color: Colors.black,
                       ),
                       label: Text(
-                        "SIgn in with facebook",
+                        "Sign in with facebook",
                         style: GoogleFonts.poppins(
                           color: Colors.black,
                           fontWeight: FontWeight.bold,

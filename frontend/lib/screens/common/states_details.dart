@@ -1,7 +1,7 @@
 import 'package:fluentui_icons/fluentui_icons.dart';
 import 'package:flutter/material.dart';
 import 'package:frontend/core/colors.dart';
-import 'package:frontend/widgets/countries/countries_big_card.dart';
+import 'package:frontend/widgets/cities/cities_big_card.dart';
 import 'package:frontend/widgets/destinations/destination_big_card.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -201,7 +201,7 @@ class _CountriesDetailsState extends State<CountriesDetails>
                       child: TabBarView(
                         controller: _tabController,
                         children: const [
-                          CountriesBigCard(),
+                          CitiesBigCard(),
                           DestinationBigCard(),
                         ],
                       ),
